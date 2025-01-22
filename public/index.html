@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHNO UDHBHAV 2K25</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./images/SvitCirclePng.png"" type="image/x-icon">
+    <style>
+        html {
+          scroll-padding-top: 100px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar-nav .nav-link {
+            font-weight: bold;
+            transition: color 0.3s ease;
+            color: #ccc;
+        }
+        .navbar-nav .nav-link:hover {
+            text-decoration: none;
+            background-color: #f15b2a;
+            border-radius: 15px;
+        }
+        ul li {
+            margin-right: 50px;
+        }
+        #navbarNav .nav-item {
+            display: flex;
+            justify-content: center;
+        }
+        header {
+            font-size: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .hero {
+            padding: 100px 0;
+        }
+        .hero .display-4 {
+            font-family: stencil;
+            font-weight: bold;
+            color: #f15b2a;
+            padding-top: 30px;
+        }
+        .hero .year {
+            font-size: 50px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .hero .btn-primary {
+            background-color: #f15b2a;
+            border: none;
+        }
+        .about {
+            padding: 50px 20px;
+        }
+        .bg {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.8;
+            color: #d1d1d1;
+        }
+        #about {
+            background-color: rgba(247, 45, 170, 0.526);
+            color: rgb(78, 245, 78);
+            padding-top: 40px;
+            padding-bottom: 40px;
+            margin-bottom: 50px;
+            border-radius: 40px;
+        }
+        #schedule {
+            background-color: #8FA28D;
+            font-family: Arial, sans-serif;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .schedule-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 2rem;
+            margin: 0 0 20px;
+            color: #333;
+        }
+        .schedule-card {
+            background-color: rgb(255, 255, 255);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: box-shadow 0.3s ease;
+        }
+        .schedule-card:hover {
+            box-shadow: 25px 25px 12px rgba(0, 0, 0, 0.404);
+        }
+        .schedule-card h5 {
+            font-weight: bold;
+            color: #333;
+        }
+        .schedule-card a {
+            text-decoration: none;
+            color: #610353ef;
+        }
+        .schedule-item {
+            font-size: 1rem;
+            color: #555;
+        }
+        /* Contact Section */
+        #contact {
+            background-color: #1f2b3a;
+            color: #ffffff;
+            padding: 50px 0;
+        }
+        #contact h2 {
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        #contact h5 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        #contact p {
+            font-size: 1rem;
+            margin: 0;
+        }
+        footer {
+            background-color: #111;
+            color: #ccc;
+            padding: 20px 0;
+        }
+        footer p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        footer .social-icons a {
+            font-size: 1.2rem;
+            color: #ccc;
+            transition: color 0.3s ease;
+            margin-right: 10px;
+        }
+        footer .social-icons a:hover {
+            color: #f15b2a;
+        }
+        
+        #register {
+            border-radius: 15px;
+            width: 150px;
+        }
+        #SvitLogoBg {
+    background-color: rgba(51, 213, 231, 0.575);
+    border-radius: 80px;
+    border-top-left-radius: 250px;
+    border-bottom-right-radius: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#SvitLogoBg img {
+    width: 100%;
+    max-width: 900px; /* Keep the logo from getting too large */
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    #SvitLogoBg {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    #SvitLogoBg img {
+        max-width: 80%; /* Reduce size for smaller screens */
+        margin: 0 auto;
+    }
+}
+
+        /* Mobile Responsiveness */
+        @media (max-width: 767px) {
+            .navbar-nav {
+                text-align: center;
+            }
+            .navbar-nav .nav-item {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            #navbarNav .navbar-toggler {
+                border-color: #f15b2a;
+            }
+            .hero .display-4 {
+                font-size: 36px;
+                padding-top: 20px;
+            }
+            .hero .year {
+                font-size: 30px;
+            }
+            #about, #schedule, #contact {
+                padding: 30px 15px;
+            }
+            .schedule-card {
+                width: 100%;
+            }
+            footer .social-icons a {
+                font-size: 1.5rem;
+                margin-right: 15px;
+            }
+        }
+    </style>
+</head>
+<body background="../public/images/svitbg.jpeg" width="100vw" height="100vh">
+    <div class="bg">
+        <header style="background-color: #111;">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <div>
+                        <span id="AboutTechLogo">
+                            <img src="./images/techlogo.jpeg" alt="Techno Udbhav Logo" height="50">
+                        </span>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="navbarNav" class="collapse navbar-collapse w-100">
+                        <ul class="navbar-nav d-flex justify-content-center w-100">
+                            <li class="nav-item"><a class="nav-link" href="#home"><span class="bi-house-door"></span> Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about"><span class="bi-info-lg"></span> About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#schedule"><span class="bi-calendar-event"></span> Schedule</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#faq"><span class="bi-question-octagon-fill"></span>     FAQ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact"><span class="bi-telephone-outbound"></span> Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero text-center">
+            <div class="container">
+                <div class="mt-5" id="SvitLogoBg">
+                    <img src="../public/images/svit.png" height="150" width="900" alt="SVIT Logo">
+                </div>
+                <h1 class="display-4">TECHNO UDHBHAV</h1>
+                <h3 class="year">2K25</h3>
+                <a href="#" class="btn btn-primary" id="register">Register</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2>ABOUT THE EVENT</h2>
+                        <p style="text-align: justify;">Techno Udbhav is the Annual Technical Extravaganza hosted by Swami Vivekanand 
+                            Institute of Technology (SVIT). This vibrant fest is a melting pot of innovation, creativity, and technological prowess, where students from diverse colleges showcase their talents and compete in a variety of events. From coding competitions and robotics challenges to workshops on emerging technologies and captivating guest lectures. Techno Udbhav offers a platform for students to learn, grow, and network with industry professionals. It's a celebration of the spirit of 
+                            engineering and a testament to the dedication and hard work of the SVIT student community.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Where</h3>
+                        <p style="font-weight: bold;"><span class="text-warning bi-check2-all"></span>SVIT Campus</p>
+                        <h3>When</h3>
+                        <p><span class="text-warning bi-check2-all"></span> 28th Feb & 1st March 2025</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule">
+            <div class="container">
+                <div class="d-flex justify-content-center">
+                    <h2 class="schedule-title">SCHEDULE</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-5 m-3">
+                        <div class="schedule-card">
+                            <h5>28th FEBRUARY</h5>
+                            <p class="schedule-item"><strong>Hackathon</strong></p>
+                            <p class="schedule-item"><strong>Code Marathon</strong></p>
+                            <p class="schedule-item"><strong>E-Games</strong></p>
+                            <p class="schedule-item"><strong>Paper Presentations</strong></p>
+                            <p class="schedule-item"><strong>Data Science Challenge</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-md-5 m-3">
+                        <div class="schedule-card">
+                            <h5>1st MARCH</h5>
+                            <p class="schedule-item"><strong> Web App Development</strong></p>
+                            <p class="schedule-item"><strong>Project Expo</strong></p>
+                            <p class="schedule-item"><strong>Tech Talk</strong></p>
+                            <p class="schedule-item"><strong>Logo Quiz</strong></p>
+                            <p class="schedule-item"><strong>Valedictory</strong> &nbsp; &nbsp; <a href="details.html">know more...</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section / Accordion Section -->
+           
+    <section id="faq" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 text-white">FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <span class="fw-bold"> What is TECHNO UDBHAV 2K25?</span>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            TECHNO UDBHAV 2K25 is a tech fest organized by Swami Vivekananda Institute of Technology to promote innovation and technical expertise.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                           <span class="fw-bold"> Who can participate?</span>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Anyone with an interest in technology, innovation, and open-source is welcome to participate.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                           <span class="fw-bold"> What is the registration process?</span>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Participants can register by clicking the "Register" button on the event's homepage.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                           <span class="fw-bold"> What are the prizes for winners?</span>
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Exciting cash prizes and certificates will be awarded to the winners.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                           <span class="fw-bold"> Will there be any workshops?</span>
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Yes, there will be workshops conducted by industry experts during the event.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-5 bg-dark text-light">
+            <div class="container">
+                <h2 class="text-center mb-4">CONTACT US</h2>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <h5 class="bi bi-geo-alt"> Address</h5>
+                        <p style="color: #f15b2a;">Swami Vivekananda Institute of Technology, Hyderabad</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="bi bi-envelope"> Email</h5>
+                        <p style="color: #f15b2a;">svittech@gmail.com</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="bi bi-phone"> Call</h5>
+                        <p style="color: #f15b2a;">Mrs. Jyotsna: +91 94944 09907<br>Mrs. Meenakshi: +91 97053 12181</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="bg-dark text-light py-3">
+            <div class="container text-center">
+                <p>SVIT Tech is a platform focused on hosting hackathons, bootcamps...</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/svithyderabad" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/svit_official_account/?igsh=MWV1cjhzOHkwcWo5Yw%3D%3D#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="https://en.wikipedia.org/wiki/Swami_Vivekananda_Institute_of_Technology" class="text-light"><i class="bi bi-wikipedia"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
